@@ -38,3 +38,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector('.gallery');
+
+const arrayEl = images.reduce((acc, image) => {
+    return (
+        acc +
+        `<li class="gallery-item"><img class="gallery-item__img" src="${image.url}" alt="${image.alt}"></li>`
+    );
+}, '');
+galleryEl.insertAdjacentHTML('afterbegin', arrayEl);
