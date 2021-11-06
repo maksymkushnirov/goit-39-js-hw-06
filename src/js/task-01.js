@@ -48,3 +48,13 @@
 
 // Category: Technologies
 // Elements: 5
+
+const categoryItems = document.querySelectorAll('.item');
+console.log(`Number of categories: ${categoryItems.length}`);
+
+const arrayItems = categoryItems.forEach(item =>
+    console.log(
+        `Category: ${item.firstElementChild.textContent} 
+        Elements: ${item.lastElementChild.children.length}`,
+    ),
+);
