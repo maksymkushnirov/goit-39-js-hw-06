@@ -4,3 +4,12 @@
 
 // <input type="text" id="name-input" placeholder="Please enter your name" />
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+
+const inputEl = document.querySelector('#name-input');
+const nameInTitleEl = document.querySelector('#name-output');
+inputEl.addEventListener('input', event => {
+    nameInTitleEl.textContent = event.currentTarget.value;
+    if (event.currentTarget.value.trim() === '') {
+        nameInTitleEl.textContent = 'Anonymous';
+    }
+});
