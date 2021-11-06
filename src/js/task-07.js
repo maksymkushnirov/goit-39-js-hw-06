@@ -4,4 +4,15 @@
 
 // <input id="font-size-control" type="range" min="16" max="96" />
 // <br />
-// <span id="text">Abracadabra!</span>
+// <span id="text">Abracadabra!</span>\
+
+const inputEl = document.querySelector('#font-size-control');
+const spanTextEl = document.querySelector('#text');
+
+console.log(inputEl.min);
+
+inputEl.addEventListener('input', onChangeValueInput);
+function onChangeValueInput(event) {
+    const inputValue = event.currentTarget.value;
+    spanTextEl.style.fontSize = `${inputValue}px`;
+}
