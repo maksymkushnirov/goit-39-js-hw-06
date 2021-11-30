@@ -7,22 +7,22 @@
 
 // Option 1
 
-const inputEl = document.querySelector("#name-input");
-const nameInTitleEl = document.querySelector("#name-output");
-inputEl.addEventListener("input", (event) => {
-  nameInTitleEl.textContent = event.currentTarget.value;
-  if (event.currentTarget.value.trim() === "") {
-    nameInTitleEl.textContent = "Anonymous";
-  }
-});
-
-// Option 2
-
 // const inputEl = document.querySelector("#name-input");
 // const nameInTitleEl = document.querySelector("#name-output");
 // inputEl.addEventListener("input", (event) => {
 //   nameInTitleEl.textContent = event.currentTarget.value;
-//   if (event.currentTarget.value === "") {
+//   if (event.currentTarget.value.trim() === "") {
 //     nameInTitleEl.textContent = "Anonymous";
 //   }
 // });
+
+// Option 2
+
+const inputEl = document.querySelector("#name-input");
+const nameInTitleEl = document.querySelector("#name-output");
+inputEl.addEventListener("input", (event) => {
+  nameInTitleEl.textContent = event.currentTarget.value;
+  if (event.currentTarget.value === "") {
+    nameInTitleEl.textContent = "Anonymous";
+  }
+});
