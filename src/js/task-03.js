@@ -43,22 +43,22 @@ const galleryEl = document.querySelector(".gallery");
 
 // Option 1
 
-const arrayEl = images.reduce((acc, image) => {
-  return (
-    acc +
-    `<li class="gallery-item"><img class="gallery-item__img" src="${image.url}" alt="${image.alt}"></li>`
-  );
-}, "");
+// const arrayEl = images.reduce((acc, image) => {
+//   return (
+//     acc +
+//     `<li class="gallery-item"><img class="gallery-item__img" src="${image.url}" alt="${image.alt}"></li>`
+//   );
+// }, "");
 
-galleryEl.insertAdjacentHTML("afterbegin", arrayEl);
+// galleryEl.insertAdjacentHTML("afterbegin", arrayEl);
 
 // Option 2
 
-// const arrayEl = images
-//   .map(
-//     (image) =>
-//       `<li class="gallery-item"><img class="gallery-item__img" src="${image.url}" alt="${image.alt}"></li>`
-//   )
-//   .join("");
+const arrayEl = images
+  .map(
+    (image) =>
+      `<li class="gallery-item"><img class="gallery-item__img" src="${image.url}" alt="${image.alt}"></li>`
+  )
+  .join("");
 
-// galleryEl.insertAdjacentHTML("afterbegin", arrayEl);
+galleryEl.insertAdjacentHTML("afterbegin", arrayEl);

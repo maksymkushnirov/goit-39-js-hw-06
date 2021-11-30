@@ -13,16 +13,20 @@
 // - Обновляй интерфейс новым значением переменной counterValue.
 
 let counterValue = 0;
-const valueEl = document.querySelector('#value');
-const buttonDecrementEl = document.querySelector('button[data-action="decrement"]');
-const buttonIncrementEl = document.querySelector('button[data-action="increment"]');
+const valueEl = document.querySelector("#value");
+const buttonDecrementEl = document.querySelector(
+  'button[data-action="decrement"]'
+);
+const buttonIncrementEl = document.querySelector(
+  'button[data-action="increment"]'
+);
 const onCounterValueDecrement = () => {
-    counterValue -= 1;
-    valueEl.textContent = counterValue;
+  counterValue -= 1;
+  valueEl.textContent = counterValue;
 };
 const onCounterValueIncrement = () => {
-    counterValue += 1;
-    valueEl.textContent = counterValue;
+  counterValue += 1;
+  valueEl.textContent = counterValue;
 };
-buttonDecrementEl.addEventListener('click', onCounterValueDecrement);
-buttonIncrementEl.addEventListener('click', onCounterValueIncrement);
+buttonDecrementEl.addEventListener("click", onCounterValueDecrement);
+buttonIncrementEl.addEventListener("click", onCounterValueIncrement);

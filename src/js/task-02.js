@@ -22,21 +22,21 @@
 // 4. После чего вставит все < li > за одну операцию в список ul.ingredients.
 
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
-const ingredientsEl = document.querySelector('#ingredients');
+const ingredientsEl = document.querySelector("#ingredients");
 
-const arrayItemsEl = ingredients.map(ingredient => {
-    const item = document.createElement('li');
-    item.classList.add('item');
-    item.textContent = `${ingredient}`;
-    return item;
+const arrayItemsEl = ingredients.map((ingredient) => {
+  const item = document.createElement("li");
+  item.classList.add("item");
+  item.textContent = `${ingredient}`;
+  return item;
 });
 
 ingredientsEl.append(...arrayItemsEl);

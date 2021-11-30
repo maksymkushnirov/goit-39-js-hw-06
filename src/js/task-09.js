@@ -13,22 +13,22 @@
 //   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 // }
 
-const bodyEl = document.querySelector('body');
-const textEl = document.querySelector('.color');
-const buttonEl = document.querySelector('.change-color');
+const bodyEl = document.querySelector("body");
+const textEl = document.querySelector(".color");
+const buttonEl = document.querySelector(".change-color");
 
-buttonEl.addEventListener('click', onChangeColor);
+buttonEl.addEventListener("click", onChangeColor);
 
 function onChangeColor() {
-    textEl.textContent = getRandomRGBColor();
-    bodyEl.style.backgroundColor = getRandomRGBColor();
+  textEl.textContent = getRandomRGBColor();
+  bodyEl.style.backgroundColor = getRandomRGBColor();
 }
 
 function getRandomIntegerFromInterval(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 function getRandomRGBColor() {
-    return `rgb(${getRandomIntegerFromInterval(0, 255)},
+  return `rgb(${getRandomIntegerFromInterval(0, 255)},
     ${getRandomIntegerFromInterval(0, 255)},
     ${getRandomIntegerFromInterval(0, 255)})`;
 }
