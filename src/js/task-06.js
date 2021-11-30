@@ -46,16 +46,35 @@
 // Option 2
 
 const inputEl = document.querySelector("#validation-input");
+const inputAttributeEl = Number(inputEl.dataset.length);
 
 inputEl.addEventListener("blur", onInputBlur);
 
-function onInputBlur({ target: { value, dataset } }) {
-  value.length === Number(dataset.length)
-    ? toggleClass("valid", "invalid")
-    : toggleClass("invalid", "valid");
+function onInputBlur(event) {
+  if (event.currentTarget.value.length === inputAttributeEl) {
+    toggleClass("valid", "invalid");
+  } else {
+    toggleClass("invalid", "valid");
+  }
 }
-
 function toggleClass(add, remove) {
   inputEl.classList.add(add);
   inputEl.classList.remove(remove);
 }
+
+// Option 3
+
+// const inputEl = document.querySelector("#validation-input");
+
+// inputEl.addEventListener("blur", onInputBlur);
+
+// function onInputBlur({ target: { value, dataset } }) {
+//   value.length === Number(dataset.length)
+//     ? toggleClass("valid", "invalid")
+//     : toggleClass("invalid", "valid");
+// }
+
+// function toggleClass(add, remove) {
+//   inputEl.classList.add(add);
+//   inputEl.classList.remove(remove);
+// }
