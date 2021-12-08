@@ -21,6 +21,8 @@
 // 3. Добавит элементу класс item.
 // 4. После чего вставит все < li > за одну операцию в список ul.ingredients.
 
+// Option 1
+
 const ingredients = [
   "Potatoes",
   "Mushrooms",
